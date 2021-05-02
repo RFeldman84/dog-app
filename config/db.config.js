@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 mongoose
-  .connect(process.env.MONGODB_URI || 'mongodb://localhost/express-template-no-auth', {
+  .connect(process.env.MONGODB_URI || 'mongodb://localhost/dog-app', {
     useCreateIndex: true, 
     useNewUrlParser: true, 
     useUnifiedTopology: true, 
