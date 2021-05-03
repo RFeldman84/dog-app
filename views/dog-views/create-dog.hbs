@@ -1,0 +1,20 @@
+<h2>Add New Dog</h2>
+
+<form action="/dogs/create" method="post">
+
+  <label for="dogName">Name: <input id="dogName" type="text" name="name" value="{{name}}"></label>
+  <br>
+  <label for="dogColor">Color: <input id="dogName" type="text" name="color" value="{{color}}"></label>
+
+  <br>
+  <label for="siblingsLabel"><u>Siblings</u></label>
+  <div class="sibling-list-box">
+    {{#each dogs}}
+    <label><input type="checkbox" name="siblings" value="{{this._id}}">{{this.name}}</label>
+    {{/each}}
+  </div>
+
+  <br>
+  <br>
+  <button>Create Doggie</button>
+</form>

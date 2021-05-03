@@ -4,7 +4,7 @@ const Schema = mongoose.Schema
 const dogSchema = new Schema(
 	{
 		name: String,
-		color: {type: String, enum:["black", "tan", "white", "brindle"]},
+		color: {type: String, enum:["Black", "Tan", "White", "Brindle"]},
 		siblings: {type: [{type: Schema.Types.ObjectId, ref:"Dog"}]} 
 	},
 	{

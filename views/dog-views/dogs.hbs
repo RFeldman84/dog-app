@@ -1,0 +1,7 @@
+<h2>LIST O' DOGS</h2>
+
+<ul>
+  {{#each dogs}}
+  <li><a href="/dogs/details/{{this._id}}">{{this.name}}</a></li>
+  {{/each}}
+</ul>

@@ -43,6 +43,7 @@ app.locals.title = 'Express - DOG APP!';
 
 
 app.use('/', require('./routes/index'));
+app.use('/dogs', require('./routes/dog-routes/dog.routes'));
 
 
 module.exports = app;
