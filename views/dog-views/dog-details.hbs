@@ -1,1 +1,25 @@
-<h2>{{dog.name}} Details</h2>
+<h2>{{dog.name}}'s Details</h2>
+
+<h3>Color: {{dog.color}}</h3>
+
+<h3>Siblings:</h3>
+<ul>
+  {{#each dog.siblings}}
+  <li>
+    <h4>{{name}}</h4>
+  </li>
+  {{/each}}
+</ul>
+
+
+
+
+
+
+
+
+
+
+<button><a href="/dogs/edit/{{dog._id}}">Edit</a></button>
+<br>
+<button><a href="/dogs/delete/{{dog._id}}">Delete</a></button>

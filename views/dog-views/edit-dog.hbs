@@ -1,0 +1,26 @@
+<h2>Edit Dog</h2>
+
+<form action="/dogs/edit/{{dog._id}}" method="post">
+
+  <label for="dogName">Name: <input id="dogName" type="text" name="name" 
+  
+   value="{{dog.name}}"></label>
+  <br>
+  <label for="dogColor">Color: <input id="dogColor" type="text" name="color" value="{{dog.color}}"></label>
+  <br>
+
+ 
+  <br>
+  <label for="siblingsLabel"><u>Siblings</u></label>
+  <div class="sibling-list-box">
+    {{#each dogs}}
+    <label><input type="checkbox" name="siblings" value="{{this._id}}" {{#if dogSelected}} checked
+        {{/if}}>{{this.name}}</label>
+    {{/each}}
+  </div>
+  <br>
+  <button>Update Doggie</button>
+  <br>
+  {{#if errorMessage}}
+  <h4 class='error-message'>*{{errorMessage}}</h4>
+  {{/if}}

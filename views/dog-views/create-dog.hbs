@@ -4,17 +4,27 @@
 
   <label for="dogName">Name: <input id="dogName" type="text" name="name" value="{{name}}"></label>
   <br>
-  <label for="dogColor">Color: <input id="dogName" type="text" name="color" value="{{color}}"></label>
+  <label for="dogColor">Color: <input id="dogColor" type="text" name="color" value="{{color}}"></label>
+  <br>
 
+
+  {{!-- <label for="dogColor"><u>Color:</u></label> 
+  <div class="color-list-box">
+  {{#each colors}} 
+  <label><input  type="radio" name="color" value="{{this}}" {{#if colorSelected}} checked {{/if}}>{{this}}</label>
+  {{/each}}
+  </div> --}}
   <br>
   <label for="siblingsLabel"><u>Siblings</u></label>
   <div class="sibling-list-box">
     {{#each dogs}}
-    <label><input type="checkbox" name="siblings" value="{{this._id}}">{{this.name}}</label>
+    <label><input type="checkbox" name="siblings" value="{{this._id}}" {{#if dogSelected}} checked {{/if}}>{{this.name}}</label>
     {{/each}}
   </div>
-
-  <br>
   <br>
   <button>Create Doggie</button>
+  <br>
+  {{#if errorMessage}}
+  <h4 class='error-message'>*{{errorMessage}}</h4>
+  {{/if}}
 </form>
