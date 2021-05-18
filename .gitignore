@@ -8,3 +8,4 @@ npm-debug.log
 .env
 # ** Remember to uncomment the .env from your .gitignore file for an app in order to keep environment variables secret **
 .vscode
+.DS_Store
