@@ -1,0 +1,37 @@
+<h2>Add an Adoption Agency</h2>
+<hr>
+<br>
+
+<form action="/adopt/create" method="POST">
+  <label for="agencyNameInput">Agency Name: <input id="agencyNameInput" type="text" required name="agencyName"
+      value="{{agencyName}}"></label>
+  <br>
+  <br>
+  <label for="agencyPhoneInput">Phone #: <input id="agencyPhoneInput" type="tel" maxlength="10" required name="phone"
+      value="{{phone}}"></label>
+  <br>
+  <br>
+  <label for="adoptStreetNumberInput">Street Number: <input id="adoptStreetNumberInput" type="text" required
+      name="streetNumber" value='{{address.streetNumber}}'></label>
+  <label for="adoptAptNumberInput">Apt: <input id="adoptAptNumberInput" type="text" name="aptNumber"
+      value='{{address.aptNumber}}'></label>
+  <br>
+  <br>
+  <label for="adoptStreetNameInput">Street Name: <input id="adoptStreetNameInput" type="text" required name="streetName"
+      value='{{address.streetName}}'></label>
+  <label for="adoptCityInput">City: <input id="adoptCityInput" type="text" required name="city"
+      value='{{address.city}}'></label>
+  <br>
+  <br>
+  <label for="adoptCityInput">State: <input id="adoptCityInput" type="text" maxlength="2" required name="state"
+      value='{{address.state}}'></label>
+  <label for="adoptZipInput">Zip: <input id="adoptZipInput" type="number" max='99999' required name="zip"
+      value='{{address.zip}}'></label>
+  <br>
+  <br>
+  <button>Create</button>
+</form>
+
+{{#if errorMessage}}
+<h4 class='error-message'>*{{errorMessage}}</h4>
+{{/if}}

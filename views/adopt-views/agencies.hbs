@@ -1,0 +1,16 @@
+<h2>LIST OF ADOPTION AGENCIES</h2>
+
+<form action="/adopt" method="get">
+  <input type="search" name="searchAgencies" id="agencySearch">
+  <button>SEARCH</button>
+</form>
+
+<ul>
+  {{#each agencies}}
+  <li><a href="/adopt/details/{{this._id}}">{{this.agencyName}}: {{this.address.state}} - {{this.address.zip}}</a>
+    <br>
+    Call: <a href="tel:{{this.phone}}">{{this.phone}}</a>
+  </li>
+  <br>
+  {{/each}}
+</ul>

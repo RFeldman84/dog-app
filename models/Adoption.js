@@ -17,6 +17,3 @@ const adoptSchema = new Schema(
 const Adopt = mongoose.model("Adoption", adoptSchema)
 module.exports = Adopt
 
-//zip max 99999
-//phone maxLength 10
-//`(${numbers.slice(0,3)}) ${numbers.slice(3,6)}-${numbers.slice(6)}`

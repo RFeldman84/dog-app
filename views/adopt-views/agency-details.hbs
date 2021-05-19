@@ -1,0 +1,46 @@
+<h2>{{agency.agencyName}}'s Details</h2>
+<h3>Phone #: {{agency.phone}}</h3>
+<h2>Address:</h2>
+<h3>{{agency.address.streetNumber}} {{agency.address.streetName}}{{#if agency.address.aptNumber}} #{{agency.address.aptNumber}} {{/if}}</h3> 
+<h3>{{agency.address.city}}, {{agency.address.state}} {{agency.address.zip}}</h3>
+
+
+
+
+
+
+
+<hr>
+<h3>Dog's For Adoption</h3>
+
+{{#if dogs}}
+{{#each dog}}
+<h4>Dog Name: {{dog.name}}</h4>
+<h4>Color: {{dog.color}}</h4>
+{{/each}}
+{{else}}
+<h4>No dogs available for adoption</h4>
+{{/if}}
+
+
+{{!-- <h3>Siblings:</h3>
+<ul>
+  {{#each dog.siblings}}
+  <li>
+    <h4>{{name}}</h4>
+  </li>
+  {{/each}}
+</ul> --}}
+
+
+
+
+
+
+
+
+
+
+<button><a href="/adopt/edit/{{agency._id}}">Edit</a></button>
+<br>
+<button><a href="/adopt/delete/{{agency._id}}">Delete</a></button>

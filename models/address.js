@@ -1,4 +1,4 @@
-const addressObject = {
+module.exports = addressObject = {
 	streetNumber: { type: String },
 	aptNumber: { type: String },
 	streetName: { type: String },
@@ -6,4 +6,3 @@ const addressObject = {
 	state: { type: String },
 	zip: { type: Number },
 }
-module.exports = addressObject
