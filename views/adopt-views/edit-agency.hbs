@@ -7,7 +7,7 @@
       value="{{agency.agencyName}}"></label>
   <br>
   <br>
-  <label for="agencyPhoneInput">Phone #: <input id="agencyPhoneInput" type="tel" maxlength="10" required name="phone"
+  <label for="agencyPhoneInput">Phone #: <input id="agencyPhoneInput" type="tel" maxlength="12" required name="phone"
       value="{{agency.phone}}"></label>
   <br>
   <br>
@@ -29,9 +29,28 @@
       value='{{agency.address.zip}}'></label>
   <br>
   <br>
+
+  {{!-- <label for="dogsLabel"><u>DOGS</u></label>
+  <div class="list-box">
+    {{#each dogs}}
+    <label><input type="checkbox" name="dogs" value="{{this._id}}" {{#if dogSelected}} checked
+        {{/if}}>{{this.name}}</label>
+    {{/each}}
+  </div>
+  <br> --}}
+
   <button>UPDATE</button>
 </form>
 
 {{#if errorMessage}}
 <h4 class='error-message'>*{{errorMessage}}</h4>
 {{/if}}
+
+
+ <label for="dogsLabel"><u>DOGS</u></label>
+  <div class="list-box">
+    {{#each dogs}}
+    <h5>{{this.name}}<a href="/adopt/addRemove/{{this._id}}/{{../agency._id}}">{{#if dogSelected}} remove {{else}} add {{/if}}</a></h5>
+    {{/each}}
+  </div>
+  <br>

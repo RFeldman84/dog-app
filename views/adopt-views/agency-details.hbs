@@ -13,13 +13,14 @@
 <hr>
 <h3>Dog's For Adoption</h3>
 
-{{#if dogs}}
-{{#each dog}}
-<h4>Dog Name: {{dog.name}}</h4>
-<h4>Color: {{dog.color}}</h4>
+{{#if agency.dogs}}
+{{#each agency.dogs}}
+<h4><a href="/dogs/details/{{this._id}}">{{this.name}}</a></h4>
+<p>Color: {{this.color}}</p>
+<hr>
 {{/each}}
 {{else}}
-<h4>No dogs available for adoption</h4>
+<h4>No dogs currently available for adoption</h4>
 {{/if}}
 
 
@@ -34,7 +35,17 @@
 
 
 
-
+{{!-- when figure out show siblings --}}
+{{!-- <hr>
+<h4>Siblings:</h4> --}}
+{{!-- {{#if this.siblings}}
+{{#each this.siblings}}
+  <li>
+    <h5><a href="/dogs/details/{{this._id}}">{{this.name}}</a></h5>
+  </li>
+  {{/each}}
+{{else}} <h4>{{this.name}} has no siblings</h4>
+{{/if}} --}}
 
 
 

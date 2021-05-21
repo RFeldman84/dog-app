@@ -8,4 +8,11 @@ a {
 .error-message {
   color: #ff0000c7; }
 
+.list-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: start; }
+
 /*# sourceMappingURL=style.css.map */

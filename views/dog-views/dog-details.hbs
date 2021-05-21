@@ -3,13 +3,16 @@
 <h3>Color: {{dog.color}}</h3>
 
 <h3>Siblings:</h3>
+{{#if dog.siblings}}
 <ul>
-  {{#each dog.siblings}}
-  <li>
-    <h4>{{name}}</h4>
-  </li>
-  {{/each}}
+{{#each dog.siblings}}
+<li>
+  <a href="/dogs/details/{{this._id}}"><h4>{{this.name}}</h4></a>
+</li>
+{{/each}}
 </ul>
+{{else}} <h4>{{dog.name}} has no siblings on file</h4>
+{{/if}}
 
 
 

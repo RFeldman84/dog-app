@@ -1,5 +1,12 @@
 $warning: #ff0000c7;
 
+@mixin center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -11,4 +18,9 @@ a {
 
 .error-message {
   color: $warning;
+}
+
+.list-box {
+  @include center-content();
+  align-items: start;
 }
